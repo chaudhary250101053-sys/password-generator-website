@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <h1 class="title">Password Generator</h1>
+        
+        <div class="output-container">
+            <span id="password-output" class="password-display">P4$5W0rD!</span>
+            <button id="copy-btn" class="copy-button" title="Copy to clipboard">
+                <i class="fa-regular fa-copy"></i>
+            </button>
+        </div>
+
+        <div class="settings-container">
+            <div class="setting input-setting">
+                <label>Name (Optional)</label>
+                <input type="text" id="user-name" class="custom-input" placeholder="e.g. Alex" autocomplete="off">
+            </div>
+
+            <div class="setting input-setting">
+                <label>Date of Birth (Optional)</label>
+                <input type="date" id="user-dob" class="custom-input">
+            </div>
+
+            <div class="setting length-setting">
+                <div class="length-header">
+                    <label>Character Length</label>
+                    <span id="length-val">12</span>
+                </div>
+                <input type="range" id="length-slider" min="6" max="32" value="12" class="slider">
+            </div>
+
+            <div class="setting checkbox-setting">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span class="checkmark"></span>
+                    Include Uppercase Letters
+                </label>
+            </div>
+
+            <div class="setting checkbox-setting">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span class="checkmark"></span>
+                    Include Lowercase Letters
+                </label>
+            </div>
+
+            <div class="setting checkbox-setting">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="numbers" checked>
+                    <span class="checkmark"></span>
+                    Include Numbers
+                </label>
+            </div>
+
+            <div class="setting checkbox-setting">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="symbols" checked>
+                    <span class="checkmark"></span>
+                    Include Symbols
+                </label>
+            </div>
+
+            <div class="strength-container">
+                <span class="strength-label">Strength</span>
+                <div class="strength-bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <button id="generate-btn" class="generate-button">
+                Generate Password <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
